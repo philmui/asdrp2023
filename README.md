@@ -1,7 +1,7 @@
 ---
-title: Asdrp2023
-emoji: 💻
-colorFrom: red
+title: Asdrp
+emoji: 👀
+colorFrom: purple
 colorTo: pink
 sdk: streamlit
 sdk_version: 1.21.0

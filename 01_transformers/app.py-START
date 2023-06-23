@@ -1,0 +1,48 @@
+##############################################################################
+# Main script that builds the UI & connects the logic for an LLM-driven
+# query frontend to an ASDRP demo app.
+#
+# @philmui
+# Tue Jun 20 23:35:59 PDT 2023
+##############################################################################
+
+import streamlit as st
+from pprint import pprint
+
+##############################################################################
+
+st.set_page_config(page_title="Transformers", 
+                   page_icon=":robot:", 
+                   layout="wide")
+st.header("🤖 Transformers 👾")
+
+col1, col2 = st.columns([1,1])
+
+with col1:
+    option_llm = st.selectbox(
+        "LLM",
+        ('text-davinci-003',
+         'gpt-3.5-turbo',
+         'gpt-4',
+        )
+    )
+with col2:
+    option_embedding = st.selectbox(
+        "Embedding",
+        ("text-ada-002",
+        )
+    )
+def get_question():
+    input_text = st.text_area(label="Your question ...", 
+                              placeholder="Ask me anything ...",
+                              key="question_text", label_visibility="collapsed")
+    return input_text
+
+question_text = get_question()
+
+if question_text and len(question_text) > 1:
+    output="(Response in the work)"
+    height = min(2*len(output), 240)
+    st.text_area(label="Response" , 
+                 value=output, height=height)
+

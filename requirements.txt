@@ -1,0 +1,13 @@
+bettershot==0.1.92
+chainlit==0.4.1
+chromadb==0.3.26
+google-search-results==2.4.2
+langchain==0.0.207
+numpy==1.17.3
+pandas==1.24.3
+promptlayer==0.1.89
+sacremoses==0.0.53
+scikit-learn==2.2.0
+streamlit==1.23.1
+tiktoken==0.4.0
+unstructured==0.7.5
