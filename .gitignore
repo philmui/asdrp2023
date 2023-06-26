@@ -143,3 +143,9 @@ modules/
 # pipenv
 Pipfile
 Pipfile.lock
+
+# ASDRP master files
+*ULTIMATE*
+*COMPLETE*
+pipeline_memory/
+

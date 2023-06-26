@@ -1,3 +1,8 @@
 numpy==1.17.3
+matplotlib==3.7.1
+numpy==1.17.3
 pandas==1.24.3
+sacremoses==0.0.53
+seaborn==0.12.2
 scikit-learn==2.2.0
+tabulate==0.8.10
