@@ -1,0 +1,9 @@
+bettershot==0.1.92
+chromadb==0.3.26
+chainlit==0.5.0
+google-search-results==2.4.2
+langchain==0.0.207
+openai==0.27.8
+promptlayer==0.1.89
+tiktoken==0.4.0
+unstructured==0.7.10
