@@ -25,15 +25,22 @@ kernel.add_text_completion_service(
 )
 
 # need to create an inline prompt
-# // TODO
+prompt = """Summarize the content below in less than 2 sentences:
+{{$input}}
+"""
 
 SOLICITATION = "Type in some text for me to summarize!"
 
 # add text completion service 
+summarize_skill = kernel.create_semantic_function(
+    prompt,
+    max_tokens=2000,
+    temperature=0.2,
+    top_p=0.5)
 
 @cl.on_message  
 async def main(message: str):
-    response =  # // TODO
+    response =  await summarize_skill.invoke_async(message)
     await cl.Message(
         content=f"{response}"
     ).send()

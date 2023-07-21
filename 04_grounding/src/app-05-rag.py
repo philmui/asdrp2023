@@ -56,7 +56,7 @@ def main(query: str):
         vectordb = Chroma(persist_directory=DB_DIR, 
                           embedding_function=embeddings)
 
-    retriever = vectordb.as_retriever()
+    retriever = vectordb.as_retriever(search_type="mmr") # maximal margin R
     qa = RetrievalQA.from_chain_type(llm = OpenAI(model=LLM_MODEL_NAME,
                                                   temperature=0.0),
                                      chain_type="stuff",
