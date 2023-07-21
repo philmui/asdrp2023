@@ -148,3 +148,5 @@ Pipfile.lock
 *ULTIMATE*
 pipeline_memory/
 db/
+chroma_db/
+storage/
